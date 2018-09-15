@@ -1,69 +1,74 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Alert } from 'react-native';
-import ImagePicker from 'react-native-image-picker'
+import { CLARIFAY_KEY } from 'react-native-dotenv'
+import Clarifai from 'clarifai'
+import { ImagePicker, Permissions } from 'expo'
+import { 
+  ActivityIndicator,
+  View,
+  TouchableOpacity,
+  Text,
+  Image,
+  Dimensions,
+  StatusBar,
+  Alert,
+  StyleSheet,
+  Button,
+ } from 'react-native'
 
 
 class Prediction extends React.Component {
-  constructor() {
-    super();
 
-    this.state = {
-      loading: false, 
-    }
+  componentDidMount() {
+    const clarifai = new Clarifai.App({
+      apiKey: CLARIFAY_KEY
+    })
 
-    this._onClick = this._onClick.bind(this) // fix _onClick context
+    process.nextTick = setImmediate // RN polyfill
+    const { data } = this.props.navigation.state.params.image
+    const file = { base64: data }
 
-    this.options = {
-      title: 'Select an image',
-      takePhotoButtonTitle: 'Select a photo',
-      chooseFromLibraryButtonTitle: 'Chose from library',
-      cancelButtonTitle: 'HALT',
-      cameraType: 'back',
-      mediaType: 'photo',
-      storageOptions: {
-        skipBackup: true,
-        path: 'Seepizz'
+    clarifai.models.predict(Clarifai.FOOD_MODEL, file).
+    then(response => {
+      const { concepts } = response.outputs[0].data
+      if (concepts && concepts.lengths > 0) {
+        for (const prediction of concepts) {
+          if (prediction.name === 'pizza' 
+                && prediction.value >= 0.99) {
+              Alert.alert('PIZZA')
+              return this.setState({ 
+                loading: false,
+                result: 'Pizza'
+              })
+            }
+            this.setState({ result: 'Not Pizza' })
+            Alert.alert('No PIZZA')
+        }
       }
-    }
-  }
-
-  _onClick() {
-    this.setState({
-      loading: true
+      this.setState({ loading: false })
     })
-
-    ImagePicker.showImagePicker(this.options, response => {
-      if (response.didCancel) {
-        this.setState({
-          loading: false,
-        })
-       } else if (response.error) {
-          Alert.alert('Shit broke with the camera', {cancelable: false})
-          this.setState({
-            loading:false,
-          })
-        }
-        else {
-          Alert.alert('THIS SHIT WORKS');
-        }
+    .catch( e => {
+      Alert.alert(
+        'Shit broke',
+        'Seriously it broke',
+        [{ text: 'OK', onPress: () => this.navigateHome() },],
+        { cancelable: false }
+      )
     })
   }
-
+  
   navigateHome = () => this.props.navigation.navigate('Home');
-
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
+        <Text>Your results are being analyzed.</Text>
+        <Text>Please be patient.</Text>
+          { this.props.navigation.state.params.image &&
+            <Text> Looks like we have an image</Text>
+          }
         <Button
           title="Home"
           onPress={ this.navigateHome }
-        />
-        <Button
-          title="DO THE THINGS!"
-          onPress={ this._onClick }
         />
       </View>
     );

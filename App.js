@@ -2,12 +2,12 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
-import HomeScreen from './src/screens/HomeScreen';
+import Home from './src/screens/HomeScreen';
 import Prediction from './src/screens/Prediction';
 
 const RootStack = createStackNavigator(
   {
-  Home: { screen: HomeScreen },
+  Home: { screen: Home },
   Prediction: { screen: Prediction }
   },
   {
