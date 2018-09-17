@@ -1,22 +1,23 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Alert, ActivityIndicator } from 'react-native';
-import { ImagePicker, Permissions } from 'expo'
+import { 
+  Text,
+  View,
+  Button,
+  Alert,
+  ScrollView,
+  Image,
+} from 'react-native';
+import { ImagePicker, Permissions, AdMobInterstitial, } from 'expo'
+import Header from '../../components/Header';
+import styles from './styles';
 
 
 class Home extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      loading: false, 
-    }
-    this._openCamera = this._openCamera.bind(this) // fix _onClick context
-  }
 
  requestCameraPermissions = async() => {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
     if (status !== 'granted') {
-      alert('Hey! You might want to enable the camera for my app, cuz you fucking need it.');
+      alert('Mellow mole requires access to the camera to run its analyis');
     }
     return this._openCamera;
   }
@@ -24,65 +25,72 @@ class Home extends React.Component {
   requestCameraRollPermissions = async() => {
     const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
     if (status !== 'granted') {
-      alert('Hey! You might want to enable the camera for my app, cuz you fucking need it.');
+      alert('Mellow mole requires access to the camera roll to run its analyis');
     }
     return this._openCameraRoll;
   }
 
   _openCamera = async () => {
-    // this.requestCameraPermissions();
     let result = await ImagePicker.launchCameraAsync({
       allowsEditing: false,
       aspect: [4, 3],
       quality: 1,
+      base64: true,
     });
-    this.props.navigation.navigate('Prediction', { image: result })
-
     if (!result.cancelled) {
       this.setState({ image: result.uri });
+      this.props.navigation.navigate('Prediction', { image: result })
     }
   };
   
   _openCameraRoll = async () => {
-    // this.requestCameraPermissions();
     let result = await ImagePicker.launchImageLibraryAsync({
       allowsEditing: true,
       aspect: [4, 3],
+      base64: true,
     });
-
-    this.props.navigation.navigate('Prediction', { image: result })
-
     if (!result.cancelled) {
       this.setState({ image: result.uri });
+      this.props.navigation.navigate('Prediction', { image: result })
     }
   };
+
+  componentDidMount() {
+    this.requestCameraPermissions();
+    this.requestCameraRollPermissions();
+  }
   
-  navigateHome = () => this.props.navigation.navigate('Prediction');
+  navigateLearnMore = () => this.props.navigation.navigate('LearnMore')
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Welcome to Mellow Mole</Text>
-        <Button
-          title="Take a picture"
-          onPress={ this._openCamera }
-        />
-        <Button
-          title="Select from camera rolls"
-          onPress={ this._openCameraRoll }
-        />
+      <View style={ styles.container}>
+        <Header />
+        <ScrollView contentContainerStyle={ styles.container }>
+          <Button
+            title="Take a picture"
+            onPress={ this._openCamera }
+            color='#57c8f2'
+            accessibilityLabel='Take a picture with your phone'
+          />
+          <Button
+            title="Select from camera roll"
+            onPress={ this._openCameraRoll }
+            color='#57c8f2'
+            accessibilityLabel='Select a picture from your phone'
+          />
+        </ScrollView>
+        <View style={ styles.learnMore}>
+          <Button
+            title= 'Learn More'
+            onPress={ this.navigateLearnMore }
+            color='#57c8f2'
+            accessibilityLabel='Learn more about mellow mole'
+          />
+        </View>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default Home;
