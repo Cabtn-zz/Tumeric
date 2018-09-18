@@ -6,12 +6,21 @@ import {
   FlatList,
 } from 'react-native';
 import Header from '../../components/Header';
+import BannerAd from '../../components/AdMobBanner';
 import styles from './styles';
 
 const FAQ = [
   { 
     question: 'How does Mellow Mole work?',
     answer: 'We use a machine learning algorithm to determine the risk level of your moles.',
+  },
+  { 
+    question: 'What is melanoma?',
+    answer: 'Melanoma is a cancer that begins in the melanocytes. Most melanoma cells still make melanin, so melanoma tumors are usually brown or black.'
+  },
+  {
+    question: 'Does Mellow Mole only check for melanoma?',
+    answer: 'Yes, Mellow Mole only checks for melanoma, it should not be used for anything else.'
   },
   {
     question: 'My mole is covered with hair, will Mellow mole still work if the mole is partially covered?',
@@ -25,6 +34,10 @@ const FAQ = [
     question: 'Are the results 100% accurate?',
     answer: 'No, this is using artifical intelligence to determine the risk level. Please consult with a doctor before deciding to take any action'
   },
+  {
+    question: 'What are the symptoms?',
+    answer: 'A new, unusual growth or a change in an existing mole. Melanomas can occur anywhere on the body.'
+  }
 ];
 
 class LearnMore extends React.Component {
@@ -44,6 +57,7 @@ class LearnMore extends React.Component {
         )
         }
       />
+      <BannerAd />
       </View>
     );
   }

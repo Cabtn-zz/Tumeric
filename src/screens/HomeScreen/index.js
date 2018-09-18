@@ -2,14 +2,23 @@ import React from 'react';
 import { 
   Text,
   View,
-  Button,
   Alert,
   ScrollView,
   Image,
 } from 'react-native';
+import { Button } from 'react-native-elements';
 import { ImagePicker, Permissions, AdMobInterstitial, } from 'expo'
 import Header from '../../components/Header';
+import BannerAd from '../../components/AdMobBanner';
 import styles from './styles';
+
+const buttonStyles = {
+  fontSize: 20,
+  fontFamily: 'System',
+  backgroundColor: '#57c8f2',
+  color: '#fff',
+  raised: true,
+}
 
 
 class Home extends React.Component {
@@ -70,24 +79,29 @@ class Home extends React.Component {
           <Button
             title="Take a picture"
             onPress={ this._openCamera }
-            color='#57c8f2'
+            { ...buttonStyles }
+            icon={{name: 'camera', type: 'evilicon', size: 40,}}
             accessibilityLabel='Take a picture with your phone'
           />
+          <View style={ styles.spacer }></View>
           <Button
             title="Select from camera roll"
             onPress={ this._openCameraRoll }
-            color='#57c8f2'
+            { ...buttonStyles }
+            icon={{name: 'image', type: 'evilicon', size: 40,}}
             accessibilityLabel='Select a picture from your phone'
           />
         </ScrollView>
         <View style={ styles.learnMore}>
           <Button
-            title= 'Learn More'
+            title= 'FAQ'
             onPress={ this.navigateLearnMore }
-            color='#57c8f2'
+            { ...buttonStyles }
+            icon={{name: 'question', type: 'evilicon', size: 30,}}
             accessibilityLabel='Learn more about mellow mole'
           />
         </View>
+        <BannerAd />
       </View>
     );
   }

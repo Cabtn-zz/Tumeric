@@ -10,15 +10,23 @@ import {
   View,
   Text,
   Alert,
-  Button,
   ScrollView,
   ActivityIndicator,
  } from 'react-native'
+ import { Button } from 'react-native-elements';
  import Header from '../../components/Header';
+ import BannerAd from '../../components/AdMobBanner';
  import styles from './styles';
 
 const modelId = 'Mellow Mole';
 const version = '66c34e031c264f6d8e468aaf5011f477';
+const buttonStyles = {
+  fontSize: 20,
+  fontFamily: 'System',
+  backgroundColor: '#57c8f2',
+  color: '#fff',
+  raised: true,
+}
 
 class Prediction extends React.Component {
   constructor() {
@@ -31,7 +39,6 @@ class Prediction extends React.Component {
     }
   }
   componentDidMount() {
-    // this.showAdWhileLoading();
     const clarifai = new Clarifai.App({
       apiKey: CLARIFAY_KEY
     })
@@ -51,13 +58,23 @@ class Prediction extends React.Component {
             loading: false,
             riskLevel: moleData.value 
           })
-          return Alert.alert('The results suggests this might be malignant');
+          Alert.alert(
+            'The results suggests you should get this checked out',
+            null,
+            [{ text: 'OK', onPress: () => this.showAd() },],
+            { cancelable: false }
+          );
         }
         this.setState({
           loading: false,
           riskLevel: moleData.value 
         })
-        return Alert.alert('Looks good!');
+        Alert.alert(
+          'Looks good!',
+          null,
+          [{ text: 'OK', onPress: () => this.showAd() },],
+          { cancelable: false }
+        );
       }
     })
     .catch( e => {
@@ -70,14 +87,11 @@ class Prediction extends React.Component {
     })
   }
 
-  showAdWhileLoading = async () => {
-    if(this.state.loading) {
-      AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712'); // Test ID, Replace with your-admob-unit-id
-      AdMobInterstitial.setTestDeviceID('EMULATOR');
-      await AdMobInterstitial.requestAdAsync();
-      await AdMobInterstitial.showAdAsync();
-    }
-    return;
+  showAd = async () => {
+    AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712'); // Test ID, Replace with your-admob-unit-id
+    AdMobInterstitial.setTestDeviceID('EMULATOR');
+    await AdMobInterstitial.requestAdAsync();
+    await AdMobInterstitial.showAdAsync();
   }
 
   determineRiskLevel() {
@@ -97,22 +111,27 @@ class Prediction extends React.Component {
     return (
       <View style={ styles.container }>
         <Header />
-        <ScrollView contentContainerStyle={ styles.text }>
-          <Text>Your results are being analyzed.</Text>
-          <Text>Thank you for your patience.</Text>
+        <ScrollView contentContainerStyle={ styles.scrollView }>
+          <Text style={ styles.text }>Your results are being analyzed.</Text>
+          <Text style={ styles.text }>Thank you for your patience.</Text>
+          <View style={ styles.spacer }/>
           { this.state.loading ? 
             <ActivityIndicator size="large" color="#0000ff" /> :
             (
-            <View>
-              <Text>Risk Level: { this.determineRiskLevel() }</Text>
+            <View style={ styles.center }>
+              <Text style={ styles.text }>Risk Level: { this.determineRiskLevel() }</Text>
+              <View style={ styles.spacer }/>
               <Button
                 title="Home"
+                { ...buttonStyles }
+                icon={{name: 'home', type: 'feather', size: 40,}}
                 onPress={ this.navigateHome }
               />
             </View>
             )
           }
         </ScrollView>
+        <BannerAd />
       </View>
     );
   }

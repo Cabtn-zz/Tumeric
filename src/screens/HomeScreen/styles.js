@@ -11,14 +11,13 @@ export default styles = StyleSheet.create({
     alignItems: 'flex-end',
     justifyContent: 'flex-end',
     position: 'absolute',
-    right: 10,
-    bottom: 10,
+    right: 0,
+    bottom: 80,
   },
   general: {
     fontFamily: 'System',
   },
-  button: {
-    fontSize: 20,
-    fontFamily: 'System',
+  spacer: {
+    padding: 5,
   }
 });
