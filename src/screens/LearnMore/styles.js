@@ -2,12 +2,12 @@ import { StyleSheet } from 'react-native';
 
 export default styles = StyleSheet.create({
   general: {
-    fontFamily: 'System',
+    fontFamily: 'Avenir' || 'System',
     fontSize: 15,
   },
   questions: {
     fontWeight: 'bold',
-    fontFamily: 'System',
+    fontFamily: 'Avenir' || 'System',
     fontSize: 15,
   },
   listView: {
@@ -16,9 +16,4 @@ export default styles = StyleSheet.create({
     left: 1,
     backgroundColor: '#fff',
   },
-  header: {
-    position: 'absolute',
-    justifyContent: 'center',
-    alignItems: 'center',
-  }
 });

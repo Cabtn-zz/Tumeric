@@ -14,7 +14,6 @@ import {
   ActivityIndicator,
  } from 'react-native'
  import { Button } from 'react-native-elements';
- import Header from '../../components/Header';
  import BannerAd from '../../components/AdMobBanner';
  import styles from './styles';
 
@@ -22,7 +21,7 @@ const modelId = 'Mellow Mole';
 const version = '66c34e031c264f6d8e468aaf5011f477';
 const buttonStyles = {
   fontSize: 20,
-  fontFamily: 'System',
+  fontFamily: 'Avenir' || 'System',
   backgroundColor: '#57c8f2',
   color: '#fff',
   raised: true,
@@ -38,10 +37,16 @@ class Prediction extends React.Component {
       riskLevel: '',
     }
   }
+
+  static navigationOptions = {
+    title: 'Results',
+  }
+
   componentDidMount() {
     const clarifai = new Clarifai.App({
       apiKey: CLARIFAY_KEY
     })
+    this.showAd();
 
     process.nextTick = setImmediate // RN polyfill
     const { base64 } = this.props.navigation.state.params.image
@@ -53,28 +58,16 @@ class Prediction extends React.Component {
       if (concepts) {
         const [moleData] = concepts.filter(concept => concept.name === 'malignant');
         if (moleData.value > 0.95) {
-          this.setState({ 
+          return this.setState({ 
             malignant: true,
             loading: false,
             riskLevel: moleData.value 
           })
-          Alert.alert(
-            'The results suggests you should get this checked out',
-            null,
-            [{ text: 'OK', onPress: () => this.showAd() },],
-            { cancelable: false }
-          );
         }
-        this.setState({
+        return this.setState({
           loading: false,
           riskLevel: moleData.value 
         })
-        Alert.alert(
-          'Looks good!',
-          null,
-          [{ text: 'OK', onPress: () => this.showAd() },],
-          { cancelable: false }
-        );
       }
     })
     .catch( e => {
@@ -106,11 +99,11 @@ class Prediction extends React.Component {
   }
 
   navigateHome = () => this.props.navigation.navigate('Home');
+  navigateLearnMore = () => this.props.navigation.navigate('LearnMore')
 
   render() {
     return (
       <View style={ styles.container }>
-        <Header />
         <ScrollView contentContainerStyle={ styles.scrollView }>
           <Text style={ styles.text }>Your results are being analyzed.</Text>
           <Text style={ styles.text }>Thank you for your patience.</Text>
@@ -120,13 +113,6 @@ class Prediction extends React.Component {
             (
             <View style={ styles.center }>
               <Text style={ styles.text }>Risk Level: { this.determineRiskLevel() }</Text>
-              <View style={ styles.spacer }/>
-              <Button
-                title="Home"
-                { ...buttonStyles }
-                icon={{name: 'home', type: 'feather', size: 40,}}
-                onPress={ this.navigateHome }
-              />
             </View>
             )
           }

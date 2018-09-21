@@ -8,13 +8,12 @@ import {
 } from 'react-native';
 import { Button } from 'react-native-elements';
 import { ImagePicker, Permissions, AdMobInterstitial, } from 'expo'
-import Header from '../../components/Header';
 import BannerAd from '../../components/AdMobBanner';
 import styles from './styles';
 
 const buttonStyles = {
   fontSize: 20,
-  fontFamily: 'System',
+  fontFamily: 'Avenir' || 'System',
   backgroundColor: '#57c8f2',
   color: '#fff',
   raised: true,
@@ -22,6 +21,9 @@ const buttonStyles = {
 
 
 class Home extends React.Component {
+static navigationOptions = {
+  title: 'Home',
+}
 
  requestCameraPermissions = async() => {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
@@ -69,13 +71,23 @@ class Home extends React.Component {
     this.requestCameraRollPermissions();
   }
   
+  navigateHome = () => this.props.navigation.navigate('Home');
   navigateLearnMore = () => this.props.navigation.navigate('LearnMore')
 
   render() {
     return (
-      <View style={ styles.container}>
-        <Header />
-        <ScrollView contentContainerStyle={ styles.container }>
+      <View style={ styles.container }>
+        <View style={ styles.spacer }></View>
+        <View style={ styles.center }>
+          <Text style={ styles.text }> Welcome to Mellow Mole! </Text>
+          <View style={ styles.bigSpacer }></View>
+          <Text style={ styles.text }>To get started</Text>
+          <View style={ styles.bigSpacer }></View>
+          <Text style={ styles.text }>Just take a picture of a mole</Text>
+          <View style={ styles.bigSpacer }></View>
+          <Image style={ styles.logo } source={require('../../../assets/images/logo.png')} />
+        </View>
+        <ScrollView>
           <Button
             title="Take a picture"
             onPress={ this._openCamera }
@@ -91,16 +103,14 @@ class Home extends React.Component {
             icon={{name: 'image', type: 'evilicon', size: 40,}}
             accessibilityLabel='Select a picture from your phone'
           />
-        </ScrollView>
-        <View style={ styles.learnMore}>
+          <View style={ styles.spacer }></View>
           <Button
-            title= 'FAQ'
-            onPress={ this.navigateLearnMore }
+            title='FAQ'
             { ...buttonStyles }
             icon={{name: 'question', type: 'evilicon', size: 30,}}
-            accessibilityLabel='Learn more about mellow mole'
+            onPress={ this.navigateLearnMore }
           />
-        </View>
+        </ScrollView>
         <BannerAd />
       </View>
     );

@@ -5,7 +5,6 @@ import {
   Button,
   FlatList,
 } from 'react-native';
-import Header from '../../components/Header';
 import BannerAd from '../../components/AdMobBanner';
 import styles from './styles';
 
@@ -41,10 +40,16 @@ const FAQ = [
 ];
 
 class LearnMore extends React.Component {
+  static navigationOptions = {
+    title: 'FAQ',
+  }
+
+  navigateHome = () => this.props.navigation.navigate('Home');
+  navigateLearnMore = () => this.props.navigation.navigate('LearnMore')
+
   render() {
     return (
       <View style={ styles.listView }>
-        <Header />
         <FlatList
         data={ FAQ }
         keyExtractor={(item, index) => index.toString()}

@@ -12,7 +12,7 @@ export default styles = StyleSheet.create({
   },
   text: {
     fontSize: 25,
-    fontFamily: 'System',
+    fontFamily: 'Avenir' || 'System',
     padding: 5,
   },
   center: {

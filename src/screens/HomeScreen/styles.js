@@ -2,22 +2,29 @@ import { StyleSheet } from 'react-native';
 
 export default styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 2,
     backgroundColor: '#fff',
     justifyContent: 'center',
   },
-  learnMore: {
-    backgroundColor: '#fff',
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
-    position: 'absolute',
-    right: 0,
-    bottom: 80,
+  center: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 20,
+    fontFamily: 'Avenir' || 'System',
   },
   general: {
-    fontFamily: 'System',
+    fontFamily: 'Avenir' || 'System',
   },
   spacer: {
     padding: 5,
+  },
+  bigSpacer: {
+    padding: 10,
+  },
+  logo: {
+    width: 170,
+    height: 170,
   }
 });
