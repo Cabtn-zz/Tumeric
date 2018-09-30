@@ -8,7 +8,10 @@ import {
 } from 'react-native';
 import { Button } from 'react-native-elements';
 import { ImagePicker, Permissions, AdMobInterstitial, } from 'expo'
+
 import BannerAd from '../../components/AdMobBanner';
+import TCModal from '../../components/Modal';
+import FirstTime from '../FirstTime';
 import styles from './styles';
 
 const buttonStyles = {
@@ -77,15 +80,15 @@ static navigationOptions = {
   render() {
     return (
       <View style={ styles.container }>
-        <View style={ styles.spacer }></View>
+        <FirstTime pagekey={"home"} title={"Disclaimer"}/>
+        <View style={ styles.spacer } />
         <View style={ styles.center }>
-          <Text style={ styles.text }> Welcome to Mellow Mole! </Text>
-          <View style={ styles.bigSpacer }></View>
+          <View style={ styles.bigSpacer } />
           <Text style={ styles.text }>To get started</Text>
-          <View style={ styles.bigSpacer }></View>
+          <View style={ styles.bigSpacer } />
           <Text style={ styles.text }>Just take a picture of a mole</Text>
-          <View style={ styles.bigSpacer }></View>
-          <Image style={ styles.logo } source={require('../../../assets/images/logo.png')} />
+          <View style={ styles.bigSpacer } />
+          <Image style={ styles.logo } source={require('../../../assets/images/splash.png')} />
         </View>
         <ScrollView>
           <Button
@@ -95,7 +98,7 @@ static navigationOptions = {
             icon={{name: 'camera', type: 'evilicon', size: 40,}}
             accessibilityLabel='Take a picture with your phone'
           />
-          <View style={ styles.spacer }></View>
+          <View style={ styles.spacer } />
           <Button
             title="Select from camera roll"
             onPress={ this._openCameraRoll }
@@ -103,7 +106,7 @@ static navigationOptions = {
             icon={{name: 'image', type: 'evilicon', size: 40,}}
             accessibilityLabel='Select a picture from your phone'
           />
-          <View style={ styles.spacer }></View>
+          <View style={ styles.spacer } />
           <Button
             title='FAQ'
             { ...buttonStyles }
@@ -111,6 +114,10 @@ static navigationOptions = {
             onPress={ this.navigateLearnMore }
           />
         </ScrollView>
+        <View style={ styles.footer }>
+          <TCModal title='Terms and Condition'/>
+          <TCModal title='Privacy Policy'/>
+        </View>
         <BannerAd />
       </View>
     );

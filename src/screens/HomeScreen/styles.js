@@ -4,7 +4,6 @@ export default styles = StyleSheet.create({
   container: {
     flex: 2,
     backgroundColor: '#fff',
-    justifyContent: 'center',
   },
   center: {
     justifyContent: 'center',
@@ -26,5 +25,12 @@ export default styles = StyleSheet.create({
   logo: {
     width: 170,
     height: 170,
+  },
+  footer: {
+    flex: 1,
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    bottom: 25,
+    padding: 5,
   }
 });
