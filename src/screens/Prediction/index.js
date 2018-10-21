@@ -1,5 +1,4 @@
 import React from 'react';
-import { CLARIFAY_KEY } from 'react-native-dotenv'
 import Clarifai from 'clarifai'
 import { 
   ImagePicker,
@@ -16,7 +15,7 @@ import {
  import { Button } from 'react-native-elements';
  import BannerAd from '../../components/AdMobBanner';
  import styles from './styles';
- import version from '../../../constants'
+ import { version, CLARIFAY_KEY } from '../../../constants'
 
 const modelId = 'Mellow Mole';
 
