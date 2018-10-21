@@ -10,7 +10,7 @@ import { Button } from 'react-native-elements';
 import { ImagePicker, Permissions, AdMobInterstitial, } from 'expo'
 
 import BannerAd from '../../components/AdMobBanner';
-import TCModal from '../../components/Modal';
+import CustomModal from '../../components/Modal';
 import FirstTime from '../FirstTime';
 import styles from './styles';
 
@@ -115,8 +115,8 @@ static navigationOptions = {
           />
         </ScrollView>
         <View style={ styles.footer }>
-          <TCModal title='Terms and Condition'/>
-          <TCModal title='Privacy Policy'/>
+          <CustomModal isTerms title='Terms and Conditions'/>
+          <CustomModal title='Privacy Policy'/>
         </View>
         <BannerAd />
       </View>

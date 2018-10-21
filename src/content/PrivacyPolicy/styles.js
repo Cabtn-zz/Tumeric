@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
-	termsTitle:{
+	privacyTitle:{
 		color:'black',
         fontWeight:'bold',
     fontSize:20,
@@ -8,14 +8,14 @@ const styles = StyleSheet.create({
 		textAlign:'center',
 		margin:10,	
 	},
-	termsHeader:{
+	privacyHeader:{
 		color:'black',
         fontWeight:'bold',
     fontSize:14,
     fontFamily: 'Avenir' || 'System',
 		margin:10,	
 	},
-	termsDescription:{
+	privacyDescription:{
     color:'black',
     fontFamily: 'Avenir' || 'System',
         fontSize:12,

@@ -10,15 +10,20 @@ import {
   TouchableOpacity
 } from 'react-native';
 import Terms from '../../content/Terms';
+import Privacy from '../../content/PrivacyPolicy';
 import styles from './styles';
 
-export default class TCModal extends Component {
+export default class CustomModal extends Component {
   state = {
     modalVisible: false,
   };
 
   setModalVisible(visible) {
     this.setState({modalVisible: visible});
+  }
+
+  determineModalContent(notTerms) {
+    return notTerms ? Privacy : Terms;
   }
 
   render() {
@@ -33,7 +38,7 @@ export default class TCModal extends Component {
           }}>
           <View style={styles.container}>
             <ScrollView>
-              <Text>{Terms}</Text>
+              <Text>{ this.determineModalContent(this.props.notTerms) }</Text>
               <View style={styles.exitContainer}>
                 <View style={styles.exitButtonContainer}>
                   <TouchableHighlight

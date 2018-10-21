@@ -30,7 +30,7 @@ export default styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     flexDirection: 'row',
-    bottom: 25,
+    bottom: 28,
     padding: 5,
   }
 });

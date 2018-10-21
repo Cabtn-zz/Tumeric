@@ -16,11 +16,10 @@ import {
  import { Button } from 'react-native-elements';
  import BannerAd from '../../components/AdMobBanner';
  import styles from './styles';
+ import version from '../../../constants'
 
 const modelId = 'Mellow Mole';
-const version = '66c34e031c264f6d8e468aaf5011f477';
-// 66c34e031c264f6d8e468aaf5011f477
-// c1859aa438c842dfa4b0938dd651c096
+
 const buttonStyles = {
   fontSize: 20,
   fontFamily: 'Avenir' || 'System',
@@ -107,7 +106,7 @@ class Prediction extends React.Component {
     return (
       <View style={ styles.container }>
         <ScrollView contentContainerStyle={ styles.scrollView }>
-          <Text style={ styles.text }>Please wait while your results are being analyzed.</Text>
+          <Text style={ styles.text }>Your results are being analyzed.</Text>
           <Text style={ styles.text }>Thank you for your patience.</Text>
           <View style={ styles.spacer }/>
           { this.state.loading ? 

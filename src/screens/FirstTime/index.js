@@ -83,7 +83,7 @@ export default class FirstTime extends Component {
                 />
             </View>
             </View>
-            <TCModal title='Terms and Condition'/>
+            <TCModal title='Terms and Conditions'/>
             <View style={styles.ftreExitContainer}>
               <TouchableHighlight
                 onPress={() => {
