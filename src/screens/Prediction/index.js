@@ -81,7 +81,7 @@ class Prediction extends React.Component {
   }
 
   showAd = async () => {
-    AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712'); // Test ID, Replace with your-admob-unit-id
+    AdMobInterstitial.setAdUnitID('ca-app-pub-7263011545722087/6068930855');
     AdMobInterstitial.setTestDeviceID('EMULATOR');
     await AdMobInterstitial.requestAdAsync();
     await AdMobInterstitial.showAdAsync();

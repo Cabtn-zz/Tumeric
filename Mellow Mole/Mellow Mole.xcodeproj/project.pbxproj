@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86F1C761218175EA0072509E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F1C760218175EA0072509E /* AppDelegate.swift */; };
+		86F1C763218175EA0072509E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F1C762218175EA0072509E /* RootViewController.swift */; };
+		86F1C765218175EA0072509E /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F1C764218175EA0072509E /* DataViewController.swift */; };
+		86F1C767218175EA0072509E /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F1C766218175EA0072509E /* ModelController.swift */; };
+		86F1C76A218175EA0072509E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86F1C768218175EA0072509E /* Main.storyboard */; };
+		86F1C76C218175EA0072509E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86F1C76B218175EA0072509E /* Assets.xcassets */; };
+		86F1C76F218175EA0072509E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86F1C76D218175EA0072509E /* LaunchScreen.storyboard */; };
+		86F1C77A218175EA0072509E /* Mellow_MoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F1C779218175EA0072509E /* Mellow_MoleTests.swift */; };
+		86F1C785218175EA0072509E /* Mellow_MoleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F1C784218175EA0072509E /* Mellow_MoleUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86F1C776218175EA0072509E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86F1C755218175EA0072509E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86F1C75C218175EA0072509E;
+			remoteInfo = "Mellow Mole";
+		};
+		86F1C781218175EA0072509E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86F1C755218175EA0072509E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86F1C75C218175EA0072509E;
+			remoteInfo = "Mellow Mole";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		86F1C75D218175EA0072509E /* Mellow Mole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mellow Mole.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86F1C760218175EA0072509E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		86F1C762218175EA0072509E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		86F1C764218175EA0072509E /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		86F1C766218175EA0072509E /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		86F1C769218175EA0072509E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		86F1C76B218175EA0072509E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86F1C76E218175EA0072509E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		86F1C770218175EA0072509E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86F1C775218175EA0072509E /* Mellow MoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mellow MoleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86F1C779218175EA0072509E /* Mellow_MoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mellow_MoleTests.swift; sourceTree = "<group>"; };
+		86F1C77B218175EA0072509E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86F1C780218175EA0072509E /* Mellow MoleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mellow MoleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86F1C784218175EA0072509E /* Mellow_MoleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mellow_MoleUITests.swift; sourceTree = "<group>"; };
+		86F1C786218175EA0072509E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86F1C75A218175EA0072509E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86F1C772218175EA0072509E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86F1C77D218175EA0072509E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86F1C754218175EA0072509E = {
+			isa = PBXGroup;
+			children = (
+				86F1C75F218175EA0072509E /* Mellow Mole */,
+				86F1C778218175EA0072509E /* Mellow MoleTests */,
+				86F1C783218175EA0072509E /* Mellow MoleUITests */,
+				86F1C75E218175EA0072509E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86F1C75E218175EA0072509E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86F1C75D218175EA0072509E /* Mellow Mole.app */,
+				86F1C775218175EA0072509E /* Mellow MoleTests.xctest */,
+				86F1C780218175EA0072509E /* Mellow MoleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86F1C75F218175EA0072509E /* Mellow Mole */ = {
+			isa = PBXGroup;
+			children = (
+				86F1C760218175EA0072509E /* AppDelegate.swift */,
+				86F1C762218175EA0072509E /* RootViewController.swift */,
+				86F1C764218175EA0072509E /* DataViewController.swift */,
+				86F1C766218175EA0072509E /* ModelController.swift */,
+				86F1C768218175EA0072509E /* Main.storyboard */,
+				86F1C76B218175EA0072509E /* Assets.xcassets */,
+				86F1C76D218175EA0072509E /* LaunchScreen.storyboard */,
+				86F1C770218175EA0072509E /* Info.plist */,
+			);
+			path = "Mellow Mole";
+			sourceTree = "<group>";
+		};
+		86F1C778218175EA0072509E /* Mellow MoleTests */ = {
+			isa = PBXGroup;
+			children = (
+				86F1C779218175EA0072509E /* Mellow_MoleTests.swift */,
+				86F1C77B218175EA0072509E /* Info.plist */,
+			);
+			path = "Mellow MoleTests";
+			sourceTree = "<group>";
+		};
+		86F1C783218175EA0072509E /* Mellow MoleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				86F1C784218175EA0072509E /* Mellow_MoleUITests.swift */,
+				86F1C786218175EA0072509E /* Info.plist */,
+			);
+			path = "Mellow MoleUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86F1C75C218175EA0072509E /* Mellow Mole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86F1C789218175EA0072509E /* Build configuration list for PBXNativeTarget "Mellow Mole" */;
+			buildPhases = (
+				86F1C759218175EA0072509E /* Sources */,
+				86F1C75A218175EA0072509E /* Frameworks */,
+				86F1C75B218175EA0072509E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mellow Mole";
+			productName = "Mellow Mole";
+			productReference = 86F1C75D218175EA0072509E /* Mellow Mole.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86F1C774218175EA0072509E /* Mellow MoleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86F1C78C218175EA0072509E /* Build configuration list for PBXNativeTarget "Mellow MoleTests" */;
+			buildPhases = (
+				86F1C771218175EA0072509E /* Sources */,
+				86F1C772218175EA0072509E /* Frameworks */,
+				86F1C773218175EA0072509E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86F1C777218175EA0072509E /* PBXTargetDependency */,
+			);
+			name = "Mellow MoleTests";
+			productName = "Mellow MoleTests";
+			productReference = 86F1C775218175EA0072509E /* Mellow MoleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		86F1C77F218175EA0072509E /* Mellow MoleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86F1C78F218175EA0072509E /* Build configuration list for PBXNativeTarget "Mellow MoleUITests" */;
+			buildPhases = (
+				86F1C77C218175EA0072509E /* Sources */,
+				86F1C77D218175EA0072509E /* Frameworks */,
+				86F1C77E218175EA0072509E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86F1C782218175EA0072509E /* PBXTargetDependency */,
+			);
+			name = "Mellow MoleUITests";
+			productName = "Mellow MoleUITests";
+			productReference = 86F1C780218175EA0072509E /* Mellow MoleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86F1C755218175EA0072509E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Abtin Ravanipour";
+				TargetAttributes = {
+					86F1C75C218175EA0072509E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					86F1C774218175EA0072509E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 86F1C75C218175EA0072509E;
+					};
+					86F1C77F218175EA0072509E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 86F1C75C218175EA0072509E;
+					};
+				};
+			};
+			buildConfigurationList = 86F1C758218175EA0072509E /* Build configuration list for PBXProject "Mellow Mole" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 86F1C754218175EA0072509E;
+			productRefGroup = 86F1C75E218175EA0072509E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86F1C75C218175EA0072509E /* Mellow Mole */,
+				86F1C774218175EA0072509E /* Mellow MoleTests */,
+				86F1C77F218175EA0072509E /* Mellow MoleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86F1C75B218175EA0072509E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86F1C76F218175EA0072509E /* LaunchScreen.storyboard in Resources */,
+				86F1C76C218175EA0072509E /* Assets.xcassets in Resources */,
+				86F1C76A218175EA0072509E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86F1C773218175EA0072509E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86F1C77E218175EA0072509E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86F1C759218175EA0072509E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86F1C763218175EA0072509E /* RootViewController.swift in Sources */,
+				86F1C767218175EA0072509E /* ModelController.swift in Sources */,
+				86F1C765218175EA0072509E /* DataViewController.swift in Sources */,
+				86F1C761218175EA0072509E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86F1C771218175EA0072509E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86F1C77A218175EA0072509E /* Mellow_MoleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86F1C77C218175EA0072509E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86F1C785218175EA0072509E /* Mellow_MoleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86F1C777218175EA0072509E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86F1C75C218175EA0072509E /* Mellow Mole */;
+			targetProxy = 86F1C776218175EA0072509E /* PBXContainerItemProxy */;
+		};
+		86F1C782218175EA0072509E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86F1C75C218175EA0072509E /* Mellow Mole */;
+			targetProxy = 86F1C781218175EA0072509E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		86F1C768218175EA0072509E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86F1C769218175EA0072509E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		86F1C76D218175EA0072509E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86F1C76E218175EA0072509E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		86F1C787218175EA0072509E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		86F1C788218175EA0072509E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86F1C78A218175EA0072509E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Mellow Mole/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Abtin.Mellow-Mole";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86F1C78B218175EA0072509E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Mellow Mole/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Abtin.Mellow-Mole";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		86F1C78D218175EA0072509E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Mellow MoleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Abtin.Mellow-MoleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mellow Mole.app/Mellow Mole";
+			};
+			name = Debug;
+		};
+		86F1C78E218175EA0072509E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Mellow MoleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Abtin.Mellow-MoleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mellow Mole.app/Mellow Mole";
+			};
+			name = Release;
+		};
+		86F1C790218175EA0072509E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Mellow MoleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Abtin.Mellow-MoleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mellow Mole";
+			};
+			name = Debug;
+		};
+		86F1C791218175EA0072509E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Mellow MoleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Abtin.Mellow-MoleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mellow Mole";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86F1C758218175EA0072509E /* Build configuration list for PBXProject "Mellow Mole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86F1C787218175EA0072509E /* Debug */,
+				86F1C788218175EA0072509E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86F1C789218175EA0072509E /* Build configuration list for PBXNativeTarget "Mellow Mole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86F1C78A218175EA0072509E /* Debug */,
+				86F1C78B218175EA0072509E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86F1C78C218175EA0072509E /* Build configuration list for PBXNativeTarget "Mellow MoleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86F1C78D218175EA0072509E /* Debug */,
+				86F1C78E218175EA0072509E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86F1C78F218175EA0072509E /* Build configuration list for PBXNativeTarget "Mellow MoleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86F1C790218175EA0072509E /* Debug */,
+				86F1C791218175EA0072509E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86F1C755218175EA0072509E /* Project object */;
+}

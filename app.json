@@ -1,8 +1,22 @@
 {
   "expo": {
+    "name": "Mellow Mole",
     "sdkVersion": "27.0.0",
-    "splash": {
-      "image": "./assets/images/splash.png"
+    "icon": "./assets/images/icon2.png",
+        "splash": {
+          "image": "./assets/images/splash.png"
+        },
+    "version": "1.0.1",
+    "slug": "mellow-mole",
+    "primaryColor": "#57c8f2",
+    "ios": {
+      "bundleIdentifier": "com.inesteinn.mellowmole",
+      "buildNumber": "1.0.1",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Mellow Mole uses the camera to analyze pictures of moles",
+        "NSPhotoLibraryAddUsageDescription": "Mellow Mole uses the camera roll to analyze pictures of moles"
+      }
     }
   }
 }

@@ -48,9 +48,6 @@ export default class FirstTime extends Component {
           transparent={true}
           style={styles.ftreContainer}
           visible={this.state.modalVisible}
-          onRequestClose={() => {
-            alert("Modal has been closed.");
-          }}
         >
           <View style={styles.ftreContainer}>
             <View style={styles.ftreTitleContainer}>

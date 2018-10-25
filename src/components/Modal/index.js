@@ -33,9 +33,7 @@ export default class CustomModal extends Component {
           animationType="slide"
           transparent={false}
           visible={this.state.modalVisible}
-          onRequestClose={() => {
-            Alert.alert('Modal has been closed.');
-          }}>
+        >
           <View style={styles.container}>
             <ScrollView>
               <Text>{ this.determineModalContent(this.props.notTerms) }</Text>

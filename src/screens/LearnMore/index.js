@@ -19,14 +19,14 @@ const FAQ = [
   },
   {
     question: 'What are the symptoms?',
-    answer: 'A new, unusual growth or a change in an existing mole. Melanomas can occur anywhere on the body.'
+    answer: 'A new, unusual growth or a change in an existing mole. Melanoma can occur anywhere on the body.'
   },
   {
     question: 'Does Mellow Mole only check for melanoma?',
     answer: 'Yes, Mellow Mole only checks for melanoma, it should not be used for anything else.'
   },
   {
-    question: 'The mole is covered with hair, will Mellow mole still work if the mole is partially covered?',
+    question: 'The mole is covered with hair, will Mellow Mole still work if the mole is partially covered?',
     answer: 'We suggest you trim the area or have a friend help you take the picture. The clearer the picture the more accurate the results!'
   },
   {

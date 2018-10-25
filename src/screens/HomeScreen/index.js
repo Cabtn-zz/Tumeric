@@ -115,8 +115,8 @@ static navigationOptions = {
           />
         </ScrollView>
         <View style={ styles.footer }>
-          <CustomModal isTerms title='Terms and Conditions'/>
-          <CustomModal title='Privacy Policy'/>
+          <CustomModal title='Terms and Conditions'/>
+          <CustomModal  notTerms title='Privacy Policy'/>
         </View>
         <BannerAd />
       </View>

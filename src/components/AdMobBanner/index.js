@@ -13,7 +13,7 @@ class BannerAd extends React.Component {
       <View style={ styles.bannerAd }>
         <AdMobBanner
           bannerSize="fullBanner"
-          adUnitID="ca-app-pub-3940256099942544/6300978111" // Test ID, Replace with your-admob-unit-id
+          adUnitID="ca-app-pub-7263011545722087/5106793852"
           testDeviceID="EMULATOR"
           onDidFailToReceiveAdWithError={this.bannerError} 
         />
